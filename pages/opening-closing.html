@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening/Closing - Logistics Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/excel-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Premier Customer Care</h2>
+                <p>Jose Miguel Santiago</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="active"><a href="opening-closing.html"><i class="fas fa-door-open"></i> OpeningClosing</a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <p class="user-name">Welcome, User</p>
+                        <p class="user-role">Logistics Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Opening & Closing</h1>
+                </div>
+                <div class="topbar-center">
+                </div>
+                <div class="topbar-right">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <div class="time-info">
+                            <span id="currentDate" class="current-time">Loading date...</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="page-content">
+                    
+                    <!-- Compact Quick Copy Area -->
+                    <div class="quick-copy-area">
+                        <div class="quick-copy-header">
+                            <h3><i class="fas fa-history"></i> Recent Copies</h3>
+                            <button class="clear-quick-copy-btn" onclick="clearQuickCopy()" title="Clear history">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="quick-copy-items" id="quickCopyItems">
+                            <div class="empty-quick-copy">
+                                <i class="far fa-clipboard"></i>
+                                <p>No recent copies. Click any spiel to start!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Excel-like Navigation Tabs -->
+                    <div class="excel-tabs">
+                        <button class="excel-tab active" data-tab="opening">
+                            <i class="fas fa-door-open"></i> Opening Spiels
+                        </button>
+                        <button class="excel-tab" data-tab="closing">
+                            <i class="fas fa-door-closed"></i> Closing Spiels
+                        </button>
+                        <button class="excel-tab" data-tab="favorites">
+                            <i class="fas fa-star"></i> Favorites
+                        </button>
+                    </div>
+                    
+                    <!-- Opening Content - COMPACT COLUMN LAYOUT -->
+                    <div class="excel-content active" id="opening-content">
+                        <div class="excel-compact-grid">
+                            <!-- INCONVENIENCE -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-exclamation-circle"></i> INCONVENIENCE
+                                        <span class="spiel-count">10</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="Please accept my sincere apologies for the inconvenience this situation has caused." data-category="inconvenience">
+                                        <div class="excel-compact-text">Please accept my sincere apologies for the inconvenience this situation has caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="You have my apologies for any inconvenience you have experienced." data-category="inconvenience">
+                                        <div class="excel-compact-text">You have my apologies for any inconvenience you have experienced.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the trouble this has caused." data-category="inconvenience">
+                                        <div class="excel-compact-text">My apologies for the trouble this has caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am truly sorry for the frustration this has caused you." data-category="inconvenience">
+                                        <div class="excel-compact-text">I am truly sorry for the frustration this has caused you.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I understand this has been an inconvenience, and for that, I am sorry." data-category="inconvenience">
+                                        <div class="excel-compact-text">I understand this has been an inconvenience, and for that, I am sorry.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for this inconvenience." data-category="inconvenience">
+                                        <div class="excel-compact-text">My apologies for this inconvenience.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am sorry for the trouble this has caused." data-category="inconvenience">
+                                        <div class="excel-compact-text">I am sorry for the trouble this has caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Sorry for the inconvenience this situation has created." data-category="inconvenience">
+                                        <div class="excel-compact-text">Sorry for the inconvenience this situation has created.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I want to sincerely apologize for the difficulties this has caused you." data-category="inconvenience">
+                                        <div class="excel-compact-text">I want to sincerely apologize for the difficulties this has caused you.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="You have my genuine apology for the inconvenience this has created." data-category="inconvenience">
+                                        <div class="excel-compact-text">You have my genuine apology for the inconvenience this has created.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- DELAY -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-clock"></i> DELAY
+                                        <span class="spiel-count">10</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="I sincerely apologize for the delay in my response." data-category="delay">
+                                        <div class="excel-compact-text">I sincerely apologize for the delay in my response.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Please accept my apologies for the time it took for me to respond." data-category="delay">
+                                        <div class="excel-compact-text">Please accept my apologies for the time it took for me to respond.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I apologize for the delay in getting back to you." data-category="delay">
+                                        <div class="excel-compact-text">I apologize for the delay in getting back to you.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am sorry for my late response." data-category="delay">
+                                        <div class="excel-compact-text">I am sorry for my late response.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the slow reply." data-category="delay">
+                                        <div class="excel-compact-text">My apologies for the slow reply.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I appreciate your patience as it is taken me longer than expected to respond." data-category="delay">
+                                        <div class="excel-compact-text">I appreciate your patience as it is taken me longer than expected to respond.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Sorry for the delay. Thank you for your patience." data-category="delay">
+                                        <div class="excel-compact-text">Sorry for the delay. Thank you for your patience.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the extended time it has taken me to reply." data-category="delay">
+                                        <div class="excel-compact-text">My apologies for the extended time it has taken me to reply.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the late reply. Let us address your question now." data-category="delay">
+                                        <div class="excel-compact-text">My apologies for the late reply. Let us address your question now.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- NOT ACCOMMODATE -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-user-times"></i> NOT ACCOMMODATE
+                                        <span class="spiel-count">8</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="I apologize that I am unable to accommodate your request." data-category="not-accommodate">
+                                        <div class="excel-compact-text">I apologize that I am unable to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I sincerely apologize that I am unable to fulfill your request at this time." data-category="not-accommodate">
+                                        <div class="excel-compact-text">I sincerely apologize that I am unable to fulfill your request at this time.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Unfortunately, I will not be able to accommodate your request, and I apologize for any disappointment this may cause." data-category="not-accommodate">
+                                        <div class="excel-compact-text">Unfortunately, I will not be able to accommodate your request, and I apologize for any disappointment this may cause.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I understand why you are asking for this, and I truly wish I could help. However, I am unable to accommodate your request on this occasion." data-category="not-accommodate">
+                                        <div class="excel-compact-text">I understand why you are asking for this, and I truly wish I could help. However, I am unable to accommodate your request on this occasion.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Thank you for your request. I have looked into it carefully, but regrettably, I will not be able to accommodate it." data-category="not-accommodate">
+                                        <div class="excel-compact-text">Thank you for your request. I have looked into it carefully, but regrettably, I will not be able to accommodate it.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies, but I am unable to grant your request as it falls outside of our policy guidelines." data-category="not-accommodate">
+                                        <div class="excel-compact-text">My apologies, but I am unable to grant your request as it falls outside of our policy guidelines.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am sorry, but due to [specific reason, e.g., security protocols, service terms], I cannot accommodate your request." data-category="not-accommodate">
+                                        <div class="excel-compact-text">I am sorry, but due to [specific reason, e.g., security protocols, service terms], I cannot accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Unfortunately, I must decline your request as it violates our standard operating procedure." data-category="not-accommodate">
+                                        <div class="excel-compact-text">Unfortunately, I must decline your request as it violates our standard operating procedure.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- CONFUSION -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-question-circle"></i> CONFUSION
+                                        <span class="spiel-count">8</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="My apologies for any confusion this may have caused." data-category="confusion">
+                                        <div class="excel-compact-text">My apologies for any confusion this may have caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Please accept my apologies for the misunderstanding." data-category="confusion">
+                                        <div class="excel-compact-text">Please accept my apologies for the misunderstanding.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="You have my sincere apologies for the lack of clarity." data-category="confusion">
+                                        <div class="excel-compact-text">You have my sincere apologies for the lack of clarity.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I can see how this was confusing, and I sincerely apologize for that." data-category="confusion">
+                                        <div class="excel-compact-text">I can see how this was confusing, and I sincerely apologize for that.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am sorry for the mix-up and any frustration it may have caused." data-category="confusion">
+                                        <div class="excel-compact-text">I am sorry for the mix-up and any frustration it may have caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the confusion. Let me clarify this for you right now." data-category="confusion">
+                                        <div class="excel-compact-text">My apologies for the confusion. Let me clarify this for you right now.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I want to apologize for the unclear information that caused this misunderstanding." data-category="confusion">
+                                        <div class="excel-compact-text">I want to apologize for the unclear information that caused this misunderstanding.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Sorry for the mixed messages. Here is the correct information…" data-category="confusion">
+                                        <div class="excel-compact-text">Sorry for the mixed messages. Here is the correct information…</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- DELAY + INCONVENIENCE -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-clock"></i> + <i class="fas fa-exclamation-circle"></i> DELAY + INCONVENIENCE
+                                        <span class="spiel-count">6</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="Please accept my apologies for the delayed response and for any inconvenience this situation has caused." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">Please accept my apologies for the delayed response and for any inconvenience this situation has caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the delay in getting back to you and for the trouble you have experienced." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">My apologies for the delay in getting back to you and for the trouble you have experienced.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I am sorry for my late reply and for the frustration this has undoubtedly caused." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">I am sorry for my late reply and for the frustration this has undoubtedly caused.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I apologize for the time it took for me to respond and for the hassle this entire situation has caused you." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">I apologize for the time it took for me to respond and for the hassle this entire situation has caused you.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="My apologies for the delay and the inconvenience. Let me address this for you right away." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">My apologies for the delay and the inconvenience. Let me address this for you right away.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I want to apologize both for the delay in my response and for the inconvenience you have encountered." data-category="delay-inconvenience">
+                                        <div class="excel-compact-text">I want to apologize both for the delay in my response and for the inconvenience you have encountered.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- DELAY + NOT ACCOMMODATE -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-clock"></i> + <i class="fas fa-user-times"></i> DELAY + NOT ACCOMMODATE
+                                        <span class="spiel-count">3</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="I apologize for the delay in my response and for being unable to accommodate your request." data-category="delay-not-accommodate">
+                                        <div class="excel-compact-text">I apologize for the delay in my response and for being unable to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I sincerely apologize for the delay in my response and for not being able to accommodate your request." data-category="delay-not-accommodate">
+                                        <div class="excel-compact-text">I sincerely apologize for the delay in my response and for not being able to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I apologize for the delay in my response. I am also unable to accommodate your request." data-category="delay-not-accommodate">
+                                        <div class="excel-compact-text">I apologize for the delay in my response. I am also unable to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- DELAY + INCON + ACCOMM -->
+                            <div class="excel-compact-category">
+                                <div class="excel-compact-header">
+                                    <div>
+                                        <i class="fas fa-clock"></i> + <i class="fas fa-exclamation-circle"></i> + <i class="fas fa-user-times"></i> DELAY + INCON + ACCOMM
+                                        <span class="spiel-count">3</span>
+                                    </div>
+                                </div>
+                                <div class="excel-compact-items">
+                                    <div class="excel-compact-item" data-spiel="Please accept my apologies for the delayed response and for any inconvenience this has caused. However, I am unable to accommodate your request." data-category="delay-incon-accomm">
+                                        <div class="excel-compact-text">Please accept my apologies for the delayed response and for any inconvenience this has caused. However, I am unable to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="I apologize for the delayed response and any consequent inconvenience. And, I must also inform you that I cannot accommodate your request." data-category="delay-incon-accomm">
+                                        <div class="excel-compact-text">I apologize for the delayed response and any consequent inconvenience. And, I must also inform you that I cannot accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="excel-compact-item" data-spiel="Please accept my apologies for the delayed response and any trouble this may have caused. I am not in a position to accommodate your request." data-category="delay-incon-accomm">
+                                        <div class="excel-compact-text">Please accept my apologies for the delayed response and any trouble this may have caused. I am not in a position to accommodate your request.</div>
+                                        <div class="excel-compact-icons">
+                                            <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                                            <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Closing Content (Initially hidden) -->
+                <!-- Closing Content (Initially hidden) -->
+<div class="excel-content" id="closing-content">
+    <div class="excel-compact-grid">
+        <!-- SURVEY + THANK YOU -->
+        <div class="excel-compact-category">
+            <div class="excel-compact-header">
+                <div>
+                    <i class="fas fa-poll"></i> SURVEY + THANK YOU
+                    <span class="spiel-count">3</span>
+                </div>
+            </div>
+            <div class="excel-compact-items">
+                <div class="excel-compact-item" data-spiel="We value your opinion. If you receive a survey, we would appreciate your time in completing it. Thank you for reaching out to FedEx." data-category="survey-thankyou">
+                    <div class="excel-compact-text">We value your opinion. If you receive a survey, we would appreciate your time in completing it. Thank you for reaching out to FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Your feedback helps us improve. If a survey is sent your way, we would be thankful for your response. Thank you for reaching out to FedEx." data-category="survey-thankyou">
+                    <div class="excel-compact-text">Your feedback helps us improve. If a survey is sent your way, we would be thankful for your response. Thank you for reaching out to FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Should a survey arrive in your inbox, your feedback would be most welcome. Thank you for allowing us to assist you." data-category="survey-thankyou">
+                    <div class="excel-compact-text">Should a survey arrive in your inbox, your feedback would be most welcome. Thank you for allowing us to assist you.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SURVEY + PATIENCE -->
+        <div class="excel-compact-category">
+            <div class="excel-compact-header">
+                <div>
+                    <i class="fas fa-poll"></i> + <i class="fas fa-hourglass-half"></i> SURVEY + PATIENCE
+                    <span class="spiel-count">5</span>
+                </div>
+            </div>
+            <div class="excel-compact-items">
+                <div class="excel-compact-item" data-spiel="We would greatly appreciate your feedback if you receive a survey. Thank you for your patience throughout this matter." data-category="survey-patience">
+                    <div class="excel-compact-text">We would greatly appreciate your feedback if you receive a survey. Thank you for your patience throughout this matter.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Should you receive a survey, your participation would be appreciated. Thank you again for your patience." data-category="survey-patience">
+                    <div class="excel-compact-text">Should you receive a survey, your participation would be appreciated. Thank you again for your patience.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Thank you for your patience on this matter. If you receive a survey, we did be grateful for your feedback." data-category="survey-patience">
+                    <div class="excel-compact-text">Thank you for your patience on this matter. If you receive a survey, we did be grateful for your feedback.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="We truly appreciate your patience. If a survey follows, your input will mean a lot to us." data-category="survey-patience">
+                    <div class="excel-compact-text">We truly appreciate your patience. If a survey follows, your input will mean a lot to us.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Your patience has been invaluable. We did appreciate your feedback if you receive a survey." data-category="survey-patience">
+                    <div class="excel-compact-text">Your patience has been invaluable. We did appreciate your feedback if you receive a survey.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- THANK YOU -->
+        <div class="excel-compact-category">
+            <div class="excel-compact-header">
+                <div>
+                    <i class="fas fa-heart"></i> THANK YOU
+                    <span class="spiel-count">7</span>
+                </div>
+            </div>
+            <div class="excel-compact-items">
+                <div class="excel-compact-item" data-spiel="Thank you for reaching out to FedEx." data-category="thankyou">
+                    <div class="excel-compact-text">Thank you for reaching out to FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="We appreciate your interest in FedEx." data-category="thankyou">
+                    <div class="excel-compact-text">We appreciate your interest in FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Thank you for getting in touch with FedEx Premier Customer Care." data-category="thankyou">
+                    <div class="excel-compact-text">Thank you for getting in touch with FedEx Premier Customer Care.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Thanks for contacting FedEx! We are here to help." data-category="thankyou">
+                    <div class="excel-compact-text">Thanks for contacting FedEx! We are here to help.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="We are glad you reached out to Premier Support." data-category="thankyou">
+                    <div class="excel-compact-text">We are glad you reached out to Premier Support.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Thank you for contacting FedEx. We are happy to have assisted you today." data-category="thankyou">
+                    <div class="excel-compact-text">Thank you for contacting FedEx. We are happy to have assisted you today.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="It was our pleasure to assist you. Thank you for reaching out to FedEx." data-category="thankyou">
+                    <div class="excel-compact-text">It was our pleasure to assist you. Thank you for reaching out to FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PATIENCE -->
+        <div class="excel-compact-category">
+            <div class="excel-compact-header">
+                <div>
+                    <i class="fas fa-hourglass-half"></i> PATIENCE
+                    <span class="spiel-count">7</span>
+                </div>
+            </div>
+            <div class="excel-compact-items">
+                <div class="excel-compact-item" data-spiel="Your patience is appreciated. Thank you for choosing FedEx." data-category="patience">
+                    <div class="excel-compact-text">Your patience is appreciated. Thank you for choosing FedEx.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Your understanding is greatly appreciated—thank you for allowing us to assist you." data-category="patience">
+                    <div class="excel-compact-text">Your understanding is greatly appreciated—thank you for allowing us to assist you.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="We sincerely thank you for your patience and understanding." data-category="patience">
+                    <div class="excel-compact-text">We sincerely thank you for your patience and understanding.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Your patience throughout this matter is truly appreciated." data-category="patience">
+                    <div class="excel-compact-text">Your patience throughout this matter is truly appreciated.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Thank you for your continued patience and trust in our service." data-category="patience">
+                    <div class="excel-compact-text">Thank you for your continued patience and trust in our service.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+                <div class="excel-compact-item" data-spiel="Your patience has been invaluable—thank you for allowing us to assist you." data-category="patience">
+                    <div class="excel-compact-text">Your patience has been invaluable—thank you for allowing us to assist you.</div>
+                    <div class="excel-compact-icons">
+                        <div class="copy-indicator"><i class="far fa-copy"></i></div>
+                        <button class="favorite-btn" title="Add to favorites"><i class="far fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                    <!-- Favorites Content (Initially hidden) -->
+                    <div class="excel-content" id="favorites-content">
+                        <div class="excel-compact-grid" id="favoritesGrid">
+                            <!-- Favorite items will be dynamically added here -->
+                            <div class="empty-favorites" id="emptyFavorites">
+                                <div class="empty-state">
+                                    <i class="far fa-star"></i>
+                                    <h3>No favorites yet</h3>
+                                    <p>Click the star icon on any spiel to add it to your favorites</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Compact Stats & Actions -->
+                    <div class="info-grid">
+                        <div class="info-card stats-card">
+                            <h4><i class="fas fa-chart-bar"></i> Stats</h4>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-label">Opening Spiels</span>
+                                    <span class="stat-value">48</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Closing Spiels</span>
+                                    <span class="stat-value">22</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Categories</span>
+                                    <span class="stat-value">11</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card actions-card">
+                            <h4><i class="fas fa-bolt"></i> Actions</h4>
+                            <div class="actions-grid">
+                                <button class="action-btn compact-btn" onclick="exportFavorites()">
+                                    <i class="fas fa-download"></i> Export Favorites
+                                </button>
+                                <button class="action-btn compact-btn" onclick="clearQuickCopy()">
+                                    <i class="fas fa-trash"></i> Clear Recent
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="main-footer">
+                <p>&copy; <span id="currentYear"></span> | Jose Miguel Santiago. All rights reserved</p>
+                <p class="timezone-info">US Time (EST) - 12 hours behind Philippines</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/excel-copy.js"></script>
+</body>
+</html>

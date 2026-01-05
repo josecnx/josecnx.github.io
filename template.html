@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Training Portal - [PAGE TITLE]</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h1>📦 Logistics Portal</h1>
+                    <p>Training & Procedures Hub</p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <div class="nav-section">
+                    <h3>Dashboard</h3>
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link">
+                            <span class="nav-icon">📊</span> Dashboard
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Daily Procedures</h3>
+                    <ul class="nav-links">
+                        <li><a href="opening-closing.html" class="nav-link">
+                            <span class="nav-icon">⏰</span> Opening & Closing
+                        </a></li>
+                        <li><a href="supplies.html" class="nav-link">
+                            <span class="nav-icon">📦</span> Supplies
+                        </a></li>
+                        <li><a href="pickup.html" class="nav-link">
+                            <span class="nav-icon">🚚</span> Pickup
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Common Issues</h3>
+                    <ul class="nav-links">
+                        <li><a href="general-concerns.html" class="nav-link">
+                            <span class="nav-icon">❓</span> General Concerns
+                        </a></li>
+                        <li><a href="package-research.html" class="nav-link">
+                            <span class="nav-icon">🔍</span> Package Research
+                        </a></li>
+                        <li><a href="service-change.html" class="nav-link">
+                            <span class="nav-icon">🔄</span> Service Change
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Special Handling</h3>
+                    <ul class="nav-links">
+                        <li><a href="ground-economy.html" class="nav-link">
+                            <span class="nav-icon">💰</span> Ground Economy
+                        </a></li>
+                        <li><a href="bulk.html" class="nav-link">
+                            <span class="nav-icon">📦</span> Bulk
+                        </a></li>
+                        <li><a href="dcc.html" class="nav-link">
+                            <span class="nav-icon">🏢</span> DCC
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Reference</h3>
+                    <ul class="nav-links">
+                        <li><a href="kc-articles.html" class="nav-link">
+                            <span class="nav-icon">📚</span> KC Articles
+                        </a></li>
+                        <li><a href="jose-spiel.html" class="nav-link">
+                            <span class="nav-icon">👤</span> Jose Spiel
+                        </a></li>
+                        <li><a href="pu-procedures.html" class="nav-link">
+                            <span class="nav-icon">📝</span> PU Procedures
+                        </a></li>
+                        <li><a href="links.html" class="nav-link">
+                            <span class="nav-icon">🔗</span> Links
+                        </a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Last Updated: <span id="last-updated">Loading...</span></p>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Dashboard</a> > <span>[PAGE TITLE]</span>
+                </div>
+                <h1 class="page-title">[PAGE TITLE]</h1>
+                <div class="page-actions">
+                    <button class="btn btn-print" onclick="window.print()">
+                        <span class="nav-icon">🖨️</span> Print
+                    </button>
+                    <button class="btn btn-secondary" onclick="history.back()">
+                        <span class="nav-icon">←</span> Back
+                    </button>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <!-- Page content will go here -->
+                <div class="procedure-section">
+                    <h2 class="section-title">Procedure Overview</h2>
+                    <p>Content specific to this page will go here.</p>
+                    
+                    <div class="alert alert-info">
+                        <span class="alert-icon">💡</span>
+                        <div>
+                            <strong>Quick Tip</strong>
+                            <p>Remember to always follow safety protocols when handling shipments.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Step-by-Step Instructions</h3>
+                    <ol class="step-list">
+                        <li class="step-item">First step description here</li>
+                        <li class="step-item">Second step description here</li>
+                        <li class="step-item">Third step description here</li>
+                    </ol>
+                </div>
+                
+                <!-- Related Links -->
+                <div class="quick-links">
+                    <h3>Related Procedures</h3>
+                    <ul>
+                        <li><a href="#">Related procedure 1</a></li>
+                        <li><a href="#">Related procedure 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <footer class="content-footer">
+                <p>© 2024 Logistics Training Portal | For internal use only</p>
+                <p class="version">Procedure ID: [ID] | Version: 1.0 | Effective: <span class="last-updated">Loading...</span></p>
+            </footer>
+        </main>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title - Logistics Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Logistics Portal</h2>
+                <p>FedEx Email Spiel</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="opening-closing.html"><i class="fas fa-door-open"></i> Opening/Closing</a></li>
+                <li><a href="general-concerns.html"><i class="fas fa-question-circle"></i> General Concerns</a></li>
+                <li><a href="package-research.html"><i class="fas fa-search"></i> Package Research</a></li>
+                <li><a href="service-change.html"><i class="fas fa-exchange-alt"></i> Service Change</a></li>
+                <li><a href="ground-economy.html"><i class="fas fa-truck"></i> Ground Economy</a></li>
+                <li><a href="jose-spiel.html"><i class="fas fa-comment-alt"></i> Jose Spiel</a></li>
+                <li><a href="supplies.html"><i class="fas fa-box-open"></i> Supplies</a></li>
+                <li><a href="pickup.html"><i class="fas fa-dolly"></i> Pickup</a></li>
+                <li><a href="dcc.html"><i class="fas fa-credit-card"></i> DCC</a></li>
+                <li><a href="bulk.html"><i class="fas fa-pallet"></i> Bulk</a></li>
+                <li><a href="kc-articles.html"><i class="fas fa-newspaper"></i> KC Articles</a></li>
+                <li><a href="pu-procedures.html"><i class="fas fa-clipboard-list"></i> PU Procedures</a></li>
+                <li><a href="links.html"><i class="fas fa-link"></i> Quick Links</a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <p class="user-name">Welcome, User</p>
+                        <p class="user-role">Logistics Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Page Title</h1>
+                </div>
+                <div class="topbar-right">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate">Loading date...</span>
+                    </div>
+                    <button class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="page-content">
+                    <div class="page-header">
+                        <h1>Page Title</h1>
+                        <p>Description of this page's content.</p>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Content Section</h3>
+                        <p>This is where the content for this page will go. You can add paragraphs, lists, tables, etc.</p>
+                        <ul>
+                            <li>Example list item 1</li>
+                            <li>Example list item 2</li>
+                            <li>Example list item 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4>Important Information</h4>
+                            <p>Key details or references for this topic.</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h4>Additional Resources</h4>
+                            <p>Links or references to related materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="main-footer">
+                <p>Logistics Portal &copy; <span id="currentYear"></span> | FedEx Email Spiel Reference</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

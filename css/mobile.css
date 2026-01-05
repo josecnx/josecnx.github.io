@@ -1,0 +1,262 @@
+/* Mobile Responsive Styles */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: var(--transition);
+        width: 280px;
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Sidebar overlay */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0 20px;
+    }
+    
+    .topbar h1 {
+        font-size: 1.5rem;
+    }
+    
+    .date-display {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        margin-right: 15px;
+    }
+    
+    .dashboard-content {
+        padding: 20px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .notepad-actions {
+        align-self: flex-end;
+    }
+    
+    .page-content {
+        padding: 20px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    .topbar {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .topbar h1 {
+        font-size: 1.3rem;
+    }
+    
+    .date-display {
+        display: none;
+    }
+    
+    .dashboard-content {
+        padding: 15px;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .notepad-container {
+        padding: 15px;
+    }
+    
+    #notepad {
+        height: 200px;
+        padding: 15px;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+    }
+    
+    .activity-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Add to mobile.css */
+
+/* Responsive for Most Used Spiels */
+@media (max-width: 768px) {
+    .notepad-editor {
+        max-height: 300px;
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    .static-content {
+        max-height: 400px;
+        padding: 20px;
+    }
+    
+    .scrollable-content {
+        max-height: 300px;
+    }
+    
+    .page-tab {
+        max-width: 120px;
+        font-size: 0.85rem;
+        padding: 5px 8px;
+    }
+    
+    .page-tab .edit-page,
+    .page-tab .delete-page {
+        font-size: 0.6rem;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .notepad-toolbar {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+    
+    .toolbar-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .font-size-select {
+        min-width: 80px;
+        padding: 6px 8px;
+    }
+}
+
+/* Responsive time display */
+@media (max-width: 480px) {
+    .notepad-editor {
+        max-height: 250px;
+        min-height: 200px;
+    }
+    
+    .static-content {
+        max-height: 350px;
+        padding: 15px;
+    }
+    
+    .page-tabs {
+        max-width: 200px;
+    }
+    
+    .notepad-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .notepad-tools {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+    
+    .notepad-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toolbar-group {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    
+    .toolbar-group:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}

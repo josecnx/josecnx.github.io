@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Concerns - Logistics Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Logistics Portal</h2>
+                <p>FedEx Email Spiel</p>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="opening-closing.html"><i class="fas fa-door-open"></i> Opening/Closing</a></li>
+                <li class="active"><a href="general-concerns.html"><i class="fas fa-question-circle"></i> General Concerns</a></li>
+                <li><a href="package-research.html"><i class="fas fa-search"></i> Package Research</a></li>
+                <li><a href="service-change.html"><i class="fas fa-exchange-alt"></i> Service Change</a></li>
+                <li><a href="ground-economy.html"><i class="fas fa-truck"></i> Ground/Economy</a></li>
+                <li><a href="jose-spiel.html"><i class="fas fa-comment-alt"></i> Jose Spiel</a></li>
+                <li><a href="supplies.html"><i class="fas fa-box-open"></i> Supplies</a></li>
+                <li><a href="pickup.html"><i class="fas fa-dolly"></i> Pickup</a></li>
+                <li><a href="dcc.html"><i class="fas fa-credit-card"></i> DCC</a></li>
+                <li><a href="bulk.html"><i class="fas fa-pallet"></i> Bulk</a></li>
+                <li><a href="kc-articles.html"><i class="fas fa-newspaper"></i> KC Articles</a></li>
+                <li><a href="pu-procedures.html"><i class="fas fa-clipboard-list"></i> PU Procedures</a></li>
+                <li><a href="links.html"><i class="fas fa-link"></i> Quick Links</a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <p class="user-name">Welcome, User</p>
+                        <p class="user-role">Logistics Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>General Concerns</h1>
+                </div>
+                <div class="topbar-right">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <div class="time-info">
+                            <span id="currentDate">Loading date...</span>
+                            <span id="currentTime" class="current-time">Loading US time...</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="page-content">
+                    <div class="page-header">
+                        <h1>General Concerns & Issues</h1>
+                        <p>Standard procedures and responses for common customer concerns and issues.</p>
+                    </div>
+                    
+                    <!-- Scrollable Static Content Section -->
+                    <div class="static-content scrollable-content">
+                        <div class="content-section">
+                            <h4><i class="fas fa-exclamation-circle"></i> Common Issues</h4>
+                            <p>Below are the most frequently encountered general concerns and their standard resolutions:</p>
+                            
+                            <ol>
+                                <li><strong>Missing Packages</strong>
+                                    <ul>
+                                        <li>Check tracking status in system</li>
+                                        <li>Verify delivery address</li>
+                                        <li>Contact local facility</li>
+                                        <li>Initiate trace process if needed</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Delayed Shipments</strong>
+                                    <ul>
+                                        <li>Check weather conditions</li>
+                                        <li>Verify customs clearance status</li>
+                                        <li>Confirm operational delays</li>
+                                        <li>Provide updated ETA</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Damaged Goods</strong>
+                                    <ul>
+                                        <li>Request photos of damage</li>
+                                        <li>Initiate claim process</li>
+                                        <li>Arrange for inspection</li>
+                                        <li>Process replacement/refund</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Billing Disputes</strong>
+                                    <ul>
+                                        <li>Review invoice details</li>
+                                        <li>Verify service charges</li>
+                                        <li>Check for discounts applied</li>
+                                        <li>Adjust invoice if warranted</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Address Corrections</strong>
+                                    <ul>
+                                        <li>Verify correct address format</li>
+                                        <li>Update delivery instructions</li>
+                                        <li>Reroute if in transit</li>
+                                        <li>Charge address correction fee</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Pickup Issues</strong>
+                                    <ul>
+                                        <li>Confirm pickup window</li>
+                                        <li>Verify package readiness</li>
+                                        <li>Check driver availability</li>
+                                        <li>Reschedule if necessary</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>International Customs</strong>
+                                    <ul>
+                                        <li>Verify documentation complete</li>
+                                        <li>Check duty/tax calculations</li>
+                                        <li>Contact customs broker</li>
+                                        <li>Provide clearance updates</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Account Access</strong>
+                                    <ul>
+                                        <li>Reset password if needed</li>
+                                        <li>Verify user permissions</li>
+                                        <li>Update contact information</li>
+                                        <li>Enable/disable features</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Service Complaints</strong>
+                                    <ul>
+                                        <li>Document complaint details</li>
+                                        <li>Escalate to supervisor</li>
+                                        <li>Follow up with resolution</li>
+                                        <li>Offer compensation if appropriate</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Technical Issues</strong>
+                                    <ul>
+                                        <li>Clear browser cache/cookies</li>
+                                        <li>Try different browser</li>
+                                        <li>Check system status page</li>
+                                        <li>Report to IT if ongoing</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="content-section">
+                            <h4><i class="fas fa-phone-alt"></i> Escalation Procedures</h4>
+                            <p>Follow these steps for issue escalation:</p>
+                            
+                            <div class="code-block">
+Level 1: Customer Service Representative
+- Attempt initial resolution
+- Document all interactions
+- Set follow-up timeline
+
+Level 2: Senior Representative/Supervisor
+- Review case details
+- Contact customer directly
+- Offer alternative solutions
+
+Level 3: Department Manager
+- Investigate root cause
+- Implement process improvements
+- Authorize compensation
+
+Level 4: Operations Director
+- Strategic issue resolution
+- Cross-department coordination
+- Policy review/update
+                            </div>
+                        </div>
+                        
+                        <div class="content-section">
+                            <h4><i class="fas fa-clock"></i> Response Time Standards</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Issue Type</th>
+                                        <th>Initial Response</th>
+                                        <th>Resolution Target</th>
+                                        <th>Escalation Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Urgent/Critical</td>
+                                        <td>1 hour</td>
+                                        <td>4 hours</td>
+                                        <td>2 hours no progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>High Priority</td>
+                                        <td>4 hours</td>
+                                        <td>24 hours</td>
+                                        <td>8 hours no progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Standard</td>
+                                        <td>8 hours</td>
+                                        <td>48 hours</td>
+                                        <td>24 hours no progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Low Priority</td>
+                                        <td>24 hours</td>
+                                        <td>5 business days</td>
+                                        <td>3 days no progress</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="content-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentation Requirements</h4>
+                            <p>All concerns must include:</p>
+                            <ul>
+                                <li>Customer name and account number</li>
+                                <li>Date/time of incident</li>
+                                <li>Tracking/reference numbers</li>
+                                <li>Detailed description</li>
+                                <li>Steps taken so far</li>
+                                <li>Customer communication history</li>
+                                <li>Supporting documents/files</li>
+                                <li>Proposed resolution</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <button class="action-btn primary" onclick="window.location.href='../index.html'">
+                            <i class="fas fa-home"></i> Back to Dashboard
+                        </button>
+                        <button class="action-btn" onclick="window.print()">
+                            <i class="fas fa-print"></i> Print This Page
+                        </button>
+                        <button class="action-btn" onclick="copyPageContent()">
+                            <i class="fas fa-copy"></i> Copy Procedures
+                        </button>
+                    </div>
+                    
+                    <!-- Additional Information Cards -->
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4>Contact Information</h4>
+                            <p><strong>Customer Service:</strong> 1-800-GO-FEDEX</p>
+                            <p><strong>Email:</strong> customer.service@fedex.com</p>
+                            <p><strong>Hours:</strong> 24/7 for urgent issues</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h4>Reference Materials</h4>
+                            <p>• SOP Manual Chapter 4</p>
+                            <p>• Customer Service Handbook</p>
+                            <p>• Escalation Matrix v3.2</p>
+                            <p>• Contact Directory 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="main-footer">
+                <p>Logistics Portal &copy; <span id="currentYear"></span> | FedEx Email Spiel Reference</p>
+                <p class="timezone-info">US Time (EST) - 12 hours behind Philippines</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const usTime = new Date(now.getTime() + (-12 * 60 * 60 * 1000));
+            
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            };
+            
+            document.getElementById('currentDate').textContent = usTime.toLocaleDateString('en-US', dateOptions);
+            document.getElementById('currentTime').textContent = usTime.toLocaleTimeString('en-US', timeOptions) + ' EST';
+        }
+        
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        
+        // Copy page content function
+        function copyPageContent() {
+            const content = document.querySelector('.static-content').innerText;
+            navigator.clipboard.writeText(content)
+                .then(() => alert('Procedures copied to clipboard!'))
+                .catch(err => console.error('Failed to copy: ', err));
+        }
+    </script>
+</body>
+</html>
